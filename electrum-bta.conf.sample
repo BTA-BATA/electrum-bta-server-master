@@ -1,0 +1,33 @@
+[server]
+# username for running the daemon
+username = electrum
+# hostname. set it to a FQDN in order to be reached from outside
+host = localhost
+# ports
+electrum_rpc_port = 8000
+stratum_tcp_port = 50001
+#stratum_tcp_ssl_port = 50002
+#report_host = 
+#report_stratum_tcp_port = 50001
+#report_stratum_tcp_ssl_port = 50002
+banner = Welcome to Electrum!
+banner_file = /etc/electrum-bta.banner
+irc = yes
+irc_nick = batasrv
+#ssl_certfile = /path/to/electrum-server.crt
+#ssl_keyfile = /path/to/electrum-server.key
+logfile = /var/log/electrum-bta.log
+donation_address = BMEyaMC3BRCtMiPWpN8NJb1Yv15jiBejMm
+
+[leveldb]
+# path to your database
+path = /var/www/html
+# for each address, history will be pruned if it is longer than this limit
+pruning_limit = 1000
+
+[bitcoind]
+bitcoind_host = localhost
+bitcoind_port = 5493
+# user and password from batacoin.conf
+bitcoind_user = rpcuser	
+bitcoind_password = rpcpassword
